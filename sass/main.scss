@@ -4,8 +4,8 @@
 @import './abstracts/mixins';
 // Base
 @import './base/base';
-@import './base/typography';
 @import './base/normalize';
+@import './base/typography';
 
 // COMPONENTS
 @import './components/btn';
@@ -13,14 +13,13 @@
 @import './components/dropdown';
 
 // LAYOUT
-@import './layout/header';
-@import './layout/nav';
 @import './layout/footer';
 @import './layout/forms';
-@import './layout/list';
+@import './layout/header';
+@import './layout/nav';
 
 // PAGES
-@import './pages/home';
 @import './pages/about';
-@import './pages/contact';
-
+@import './pages/careers';
+@import './pages/home';
+@import './pages/locations';

@@ -1,0 +1,13 @@
+@mixin baElements($w, $h) {
+  content: "";
+  display: inline-block;
+  width: $w;
+  height: $h;
+}
+
+@mixin text{
+  font-family: Lexend Deca;
+  font-weight: normal;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}
