@@ -1,0 +1,80 @@
+.about-hero {
+  background-image: url(../../images/hero-circle.svg), url(../../images/locations-bg.png);
+  background-size: 23.4rem 6.2rem, cover;
+  background-repeat: no-repeat;
+  background-position: right -3rem center, center;
+  padding: 7.2rem 0;
+}
+
+.mobility {
+  background-image: url(../../images/rectangle-arrow.svg), url(../../images/bg-light-circle.png);
+  background-size: 74rem 15rem, 44.5rem 44.5rem;
+  background-repeat: no-repeat;
+  background-position: right bottom, right -30rem center;
+}
+
+.urban {
+  background-image: url(../../images/rectangle-arrow2.svg), url(../../images/bg-light-circle.png);
+  background-size: 75rem 15rem, 44.5rem 44.5rem;
+  background-repeat: no-repeat;
+  background-position: left -31rem top, left -30rem center;
+  z-index: 100;
+
+  & .content {
+    flex-direction: row-reverse;
+  }
+}
+
+.values {
+  margin: 12rem 0;
+}
+
+
+// **************************
+// ******SECTION FAQs********
+// **************************
+
+.faqs {
+  margin-bottom: 12rem;
+}
+
+.faq-heading {
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 4.8rem;
+  letter-spacing: -1.2px;
+  color: $color-dark-grey;
+}
+
+.faq-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 6.4rem 0;
+}
+
+.faq-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.questions {
+  max-width: 73rem;
+
+  &__wrapper {
+    display: inline-block;
+    width: 100%;
+    padding: 3.2rem 4rem;
+    background-color: $color-snow;
+    margin-right: auto;
+
+    &:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__text {
+    margin-top: 2.4rem;
+  }
+}
