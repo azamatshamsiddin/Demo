@@ -566,9 +566,13 @@ html {
     width: 100%;
     padding: 3.2rem 4rem;
     background-color: #f2f5f9;
-    margin-right: auto; }
+    transition: all .3s ease; }
+    .questions__wrapper:hover {
+      background-color: #fff4df; }
     .questions__wrapper:not(:last-child) {
       margin-bottom: 1.6rem; }
+  .questions__heading {
+    cursor: pointer; }
   .questions__text {
     margin-top: 2.4rem; }
 

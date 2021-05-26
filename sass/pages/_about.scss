@@ -67,11 +67,18 @@
     width: 100%;
     padding: 3.2rem 4rem;
     background-color: $color-snow;
-    margin-right: auto;
+    transition: all .3s ease;
+    &:hover{
+      background-color: $color-light-yellow;
+    }
 
     &:not(:last-child) {
       margin-bottom: 1.6rem;
     }
+  }
+
+  &__heading{
+    cursor: pointer;
   }
 
   &__text {
