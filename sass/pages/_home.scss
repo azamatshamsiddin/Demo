@@ -3,7 +3,7 @@
 // background-position: left top 58%, right -5rem bottom 15rem, center;
 .hero {
   padding: 15.3rem 0;
-  background-image: url(../../images/hero-bg.png);
+  background-image: url(../images/hero-bg.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -60,14 +60,14 @@
 //***SECTION TELEMETRY, CITY, PAYMENT ******
 //******************************************
 .telemetry {
-  background-image: url(../../images/rectangle-arrow.svg), url(../../images/bg-light-circle.png);
+  background-image: url(../images/rectangle-arrow.svg), url(../images/bg-light-circle.png);
   background-size: 74rem 15rem, 44.5rem 44.5rem;
   background-repeat: no-repeat;
   background-position: right bottom, right -30rem center;
 }
 
 .city {
-  background-image: url(../../images/rectangle-arrow2.svg), url(../../images/bg-light-circle.png);
+  background-image: url(../images/rectangle-arrow2.svg), url(../images/bg-light-circle.png);
   background-size: 75rem 15rem, 44.5rem 44.5rem;
   background-repeat: no-repeat;
   background-position: left -31rem top, left -30rem center;
@@ -79,7 +79,7 @@
 }
 
 .payment {
-  background-image: url(../../images/rectangle-arrow.svg), url(../../images/bg-light-circle.png);
+  background-image: url(../images/rectangle-arrow.svg), url(../images/bg-light-circle.png);
   background-size: 74rem 15rem, 44.5rem 44.5rem;
   background-repeat: no-repeat;
   background-position: right -31rem top 8rem, right -30rem center;

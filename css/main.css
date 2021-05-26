@@ -20,7 +20,7 @@ img {
   vertical-align: middle; }
 
 body {
-  font-family: 'Space Mono';
+  font-family: 'Space Mono', sans-serif;
   color: #939caa; }
 
 .visually-hidden {
@@ -348,16 +348,18 @@ template {
 @font-face {
   font-family: 'Space Mono';
   font-style: normal;
+  font-display: swap;
   font-weight: 700;
-  src: local(""), url("../../fonts/space-mono-v6-latin-700.woff2") format("woff2"), url("../../fonts/space-mono-v6-latin-700.woff") format("woff");
+  src: local(""), url("../fonts/space-mono-v6-latin-700.woff2") format("woff2"), url("../fonts/space-mono-v6-latin-700.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
 /* lexend-deca-regular - latin */
 @font-face {
   font-family: 'Lexend Deca';
   font-style: normal;
+  font-display: swap;
   font-weight: 400;
-  src: local(""), url("../../fonts/lexend-deca-v7-latin-regular.woff2") format("woff2"), url("../../fonts/lexend-deca-v7-latin-regular.woff") format("woff");
+  src: local(""), url("../fonts/lexend-deca-v7-latin-regular.woff2") format("woff2"), url("../fonts/lexend-deca-v7-latin-regular.woff") format("woff");
   /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */ }
 
 html {
@@ -394,12 +396,14 @@ html {
   line-height: 2.5rem; }
 
 .btn {
+  width: 18rem;
+  text-align: center;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.5rem;
   line-height: 2.5rem;
   display: inline-block;
-  padding: 1.4rem 3.9rem;
+  padding: 1.4rem 0;
   color: #fff;
   background-color: #fcb72b;
   border: 3px solid transparent;
@@ -413,7 +417,7 @@ html {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 4.8rem; }
+  margin-top: 10rem; }
 
 .card {
   display: flex;
@@ -434,7 +438,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 16rem 0; }
+  margin: 12rem 0; }
   .content__img {
     border-radius: 50%;
     z-index: -1; }
@@ -447,7 +451,7 @@ html {
 .footer-top {
   padding: 10.2rem 0;
   background-color: #495567;
-  background-image: url(../../images/footer-bg.png);
+  background-image: url(../images/footer-bg.png);
   background-repeat: no-repeat;
   background-position: right bottom; }
   .footer-top .container {
@@ -510,20 +514,20 @@ html {
       color: #fcb72b; }
 
 .about-hero {
-  background-image: url(../../images/hero-circle.svg), url(../../images/locations-bg.png);
+  background-image: url(../images/hero-circle.svg), url(../images/about-bg.png);
   background-size: 23.4rem 6.2rem, cover;
   background-repeat: no-repeat;
   background-position: right -3rem center, center;
   padding: 7.2rem 0; }
 
 .mobility {
-  background-image: url(../../images/rectangle-arrow.svg), url(../../images/bg-light-circle.png);
+  background-image: url(../images/rectangle-arrow.svg), url(../images/bg-light-circle.png);
   background-size: 74rem 15rem, 44.5rem 44.5rem;
   background-repeat: no-repeat;
   background-position: right bottom, right -30rem center; }
 
 .urban {
-  background-image: url(../../images/rectangle-arrow2.svg), url(../../images/bg-light-circle.png);
+  background-image: url(../images/rectangle-arrow2.svg), url(../images/bg-light-circle.png);
   background-size: 75rem 15rem, 44.5rem 44.5rem;
   background-repeat: no-repeat;
   background-position: left -31rem top, left -30rem center;
@@ -568,9 +572,40 @@ html {
   .questions__text {
     margin-top: 2.4rem; }
 
+.careers-hero {
+  background-image: url(../images/hero-circle.svg), url(../images/locations-bg.png);
+  background-size: 23.4rem 6.2rem, cover;
+  background-repeat: no-repeat;
+  background-position: right -3rem center, center;
+  padding: 7.2rem 0; }
+
+.join-us {
+  margin: 12rem 0; }
+
+.mission {
+  background-image: url(../images/rectangle-arrow.svg), url(../images/bg-light-circle.png);
+  background-size: 74rem 15rem, 44.5rem 44.5rem;
+  background-repeat: no-repeat;
+  background-position: right bottom, right -30rem center; }
+
+.apply {
+  margin: 12rem 0 16rem; }
+
+.apply-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 3.2rem 6.4rem 3.2rem 4rem;
+  background-color: #f2f5f9;
+  width: 100%; }
+  .apply-wrapper:not(:last-child) {
+    margin-bottom: 2.4rem; }
+
+.apply-info__heading {
+  margin-bottom: 8px; }
+
 .hero {
   padding: 15.3rem 0;
-  background-image: url(../../images/hero-bg.png);
+  background-image: url(../images/hero-bg.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; }
@@ -610,13 +645,13 @@ html {
     margin: 4rem 0 2.7rem; }
 
 .telemetry {
-  background-image: url(../../images/rectangle-arrow.svg), url(../../images/bg-light-circle.png);
+  background-image: url(../images/rectangle-arrow.svg), url(../images/bg-light-circle.png);
   background-size: 74rem 15rem, 44.5rem 44.5rem;
   background-repeat: no-repeat;
   background-position: right bottom, right -30rem center; }
 
 .city {
-  background-image: url(../../images/rectangle-arrow2.svg), url(../../images/bg-light-circle.png);
+  background-image: url(../images/rectangle-arrow2.svg), url(../images/bg-light-circle.png);
   background-size: 75rem 15rem, 44.5rem 44.5rem;
   background-repeat: no-repeat;
   background-position: left -31rem top, left -30rem center;
@@ -625,7 +660,7 @@ html {
     flex-direction: row-reverse; }
 
 .payment {
-  background-image: url(../../images/rectangle-arrow.svg), url(../../images/bg-light-circle.png);
+  background-image: url(../images/rectangle-arrow.svg), url(../images/bg-light-circle.png);
   background-size: 74rem 15rem, 44.5rem 44.5rem;
   background-repeat: no-repeat;
   background-position: right -31rem top 8rem, right -30rem center;
@@ -633,7 +668,7 @@ html {
   z-index: 100; }
 
 .locations-hero {
-  background-image: url(../../images/hero-circle.svg), url(../../images/locations-bg.png);
+  background-image: url(../images/hero-circle.svg), url(../images/locations-bg.png);
   background-size: 23.4rem 6.2rem, cover;
   background-repeat: no-repeat;
   background-position: right -3rem center, center;

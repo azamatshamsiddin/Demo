@@ -1,0 +1,40 @@
+.careers-hero {
+  background-image: url(../images/hero-circle.svg), url(../images/locations-bg.png);
+  background-size: 23.4rem 6.2rem, cover;
+  background-repeat: no-repeat;
+  background-position: right -3rem center, center;
+  padding: 7.2rem 0;
+}
+
+.join-us {
+  margin: 12rem 0;
+}
+
+.mission {
+  background-image: url(../images/rectangle-arrow.svg), url(../images/bg-light-circle.png);
+  background-size: 74rem 15rem, 44.5rem 44.5rem;
+  background-repeat: no-repeat;
+  background-position: right bottom, right -30rem center;
+}
+
+.apply {
+  margin: 12rem 0 16rem;
+}
+
+.apply-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 3.2rem 6.4rem 3.2rem 4rem;
+  background-color: $color-snow;
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.apply-info {
+  &__heading {
+    margin-bottom: 8px;
+  }
+}
