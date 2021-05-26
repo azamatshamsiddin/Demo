@@ -37,4 +37,12 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 0 1.5rem;
+
+  @include respond(tablet) {
+    padding: 0 4rem;
+  }
+
+  @include respond(phone) {
+    padding: 0 3.2rem;
+  }
 }

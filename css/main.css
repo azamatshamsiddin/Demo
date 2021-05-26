@@ -38,6 +38,12 @@ body {
   margin-left: auto;
   margin-right: auto;
   padding: 0 1.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .container {
+      padding: 0 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .container {
+      padding: 0 3.2rem; } }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
@@ -372,6 +378,10 @@ html {
   letter-spacing: -2.5px;
   color: #fff;
   margin: 0; }
+  @media only screen and (max-width: 37.5em) {
+    .hero-heading {
+      font-size: 4rem;
+      line-height: 4rem; } }
 
 .section-heading {
   font-weight: bold;
@@ -380,6 +390,10 @@ html {
   letter-spacing: -2.2px;
   color: #495567;
   margin: 0; }
+  @media only screen and (max-width: 37.5em) {
+    .section-heading {
+      font-size: 3.2rem;
+      line-height: 3.2rem; } }
 
 .card-heading {
   font-weight: bold;
@@ -388,6 +402,9 @@ html {
   letter-spacing: -1.1px;
   color: #495567;
   margin: 0; }
+  @media only screen and (max-width: 37.5em) {
+    .card-heading {
+      font-size: 2.2rem; } }
 
 .text {
   font-family: Lexend Deca;
@@ -438,15 +455,33 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 12rem 0; }
+  margin: 12rem 0;
+  flex-direction: column-reverse;
+  text-align: center; }
   .content__img {
     border-radius: 50%;
     z-index: -1; }
+    @media only screen and (max-width: 37.5em) {
+      .content__img {
+        width: 31.1rem;
+        height: 31.1em; } }
 
 .content-info {
   max-width: 44.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .content-info {
+      margin-top: 6.4rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .content-info {
+      margin-top: 5.6rem; } }
   .content-info__text {
     margin: 2.4rem 0 4rem; }
+    @media only screen and (max-width: 56.25em) {
+      .content-info__text {
+        margin: 4rem 0; } }
+    @media only screen and (max-width: 56.25em) {
+      .content-info__text {
+        margin: 3.2rem 0; } }
 
 .footer-top {
   padding: 10.2rem 0;
@@ -477,7 +512,8 @@ html {
   color: #fcb72b;
   text-decoration: none;
   display: inline-block;
-  transition: all .3s ease; }
+  transition: all .3s ease;
+  z-index: 100; }
   .social__link:not(:last-child) {
     margin-right: 2.4rem; }
   .social__link:hover {
@@ -486,23 +522,71 @@ html {
 .header {
   padding: 2.2rem 0; }
 
+@media only screen and (max-width: 37.5em) {
+  .header-btn {
+    display: none; } }
+
 .logo {
   text-decoration: none;
-  margin-right: 6rem;
   transition: all .3s ease; }
   .logo:hover {
     opacity: .8; }
+  @media only screen and (max-width: 37.5em) {
+    .logo {
+      margin: 0 auto; } }
+  @media only screen and (max-width: 37.5em) {
+    .logo__img {
+      display: inline-block;
+      width: 7.5rem;
+      height: 2rem; } }
 
 .header-inner {
   display: flex;
   align-items: center; }
 
+@media only screen and (max-width: 37.5em) {
+  .header-nav {
+    display: none; } }
+
+.burger__label {
+  display: none; }
+  @media only screen and (max-width: 37.5em) {
+    .burger__label {
+      display: block; } }
+
+.burger__input {
+  display: none; }
+
+.burger__menu {
+  display: inline-block;
+  width: 2rem;
+  height: 4px;
+  background-color: #fcb72b;
+  position: relative; }
+  .burger__menu::before, .burger__menu::after {
+    content: "";
+    display: inline-block;
+    width: 2rem;
+    height: 4px;
+    position: absolute;
+    background-color: #fcb72b; }
+  .burger__menu::before {
+    top: 6px; }
+  .burger__menu::after {
+    top: -6px; }
+
 .list {
-  display: flex; }
+  display: flex;
+  margin-left: 6rem; }
+  @media only screen and (max-width: 56.25em) {
+    .list {
+      margin-left: 4rem; } }
   .list__item {
-    list-style: none; }
-    .list__item:not(:last-child) {
-      margin-right: 3.2rem; }
+    list-style: none;
+    margin-right: 3.2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .list__item {
+        margin-right: 2rem; } }
   .list__link {
     font-weight: bold;
     font-size: 1.5rem;
@@ -609,27 +693,77 @@ html {
 
 .hero {
   padding: 15.3rem 0;
-  background-image: url(../images/hero-bg.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; }
+  background-image: url(../images/hero-arrow.svg), url(../images/hero-circle.svg), url(../images/hero-bg-img.png);
+  background-size: 45rem 15rem, 23.4rem 6.2rem, cover;
+  background-position: left 780px bottom 152px, right -3.5rem bottom 16.5rem, center;
+  background-repeat: no-repeat;
+  position: relative; }
+  @media only screen and (max-width: 75em) {
+    .hero {
+      background-image: none, url(../images/hero-circle.svg), url(../images/hero-bg-img.png); } }
+  @media only screen and (max-width: 56.25em) {
+    .hero {
+      padding: 13.7rem 0 21.5rem;
+      background-image: url(../images/hero-arrow.svg), url(../images/hero-circle.svg), url(../images/hero-bg-img.png);
+      background-position: left -12rem bottom 3rem, right -3.5rem bottom 4.5rem, right -18rem center; } }
+  @media only screen and (max-width: 37.5em) {
+    .hero {
+      padding: 11.5rem 0 18rem;
+      background-image: url(../images/hero-arrow.svg), none, url(../images/hero-bg-img.png);
+      background-position: left -32rem bottom 3rem, right -3.5rem bottom 4.5rem, right -8rem center; } }
+  .hero::before {
+    content: "";
+    display: inline-block;
+    width: 28rem;
+    height: 1.5rem;
+    background-color: #fcb72b;
+    position: absolute;
+    top: 54%;
+    left: 0; }
+    @media only screen and (max-width: 75em) {
+      .hero::before {
+        display: none; } }
 
 .hero-inner {
   max-width: 50rem; }
+  @media only screen and (max-width: 56.25em) {
+    .hero-inner {
+      margin: 0 auto;
+      text-align: center; } }
 
 .hero-info {
   margin-top: 4rem;
-  max-width: 40.5rem; }
+  max-width: 40.5rem;
+  margin-left: auto; }
+  @media only screen and (max-width: 56.25em) {
+    .hero-info {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: unset; } }
+  @media only screen and (max-width: 37.5em) {
+    .hero-info {
+      margin-top: 2.4rem; } }
   .hero-info__text {
     margin-bottom: 4rem;
     color: #fff; }
+    @media only screen and (max-width: 37.5em) {
+      .hero-info__text {
+        margin-bottom: 3.4rem; } }
 
 .conveniences {
   margin-top: 16rem;
   position: relative; }
+  @media only screen and (max-width: 37.5em) {
+    .conveniences {
+      margin-top: 12rem; } }
 
 .conveniences-inner {
   display: flex; }
+  @media only screen and (max-width: 56.25em) {
+    .conveniences-inner {
+      flex-direction: column;
+      max-width: 57rem;
+      margin: 0 auto; } }
   .conveniences-inner::before {
     content: "";
     display: inline-block;
@@ -640,36 +774,114 @@ html {
     top: 4rem;
     left: 0;
     z-index: -1; }
+    @media only screen and (max-width: 1500px) {
+      .conveniences-inner::before {
+        width: 95rem; } }
+    @media only screen and (max-width: 1300px) {
+      .conveniences-inner::before {
+        width: 86rem; } }
+    @media only screen and (max-width: 75em) {
+      .conveniences-inner::before {
+        width: 81rem; } }
+    @media only screen and (max-width: 1050px) {
+      .conveniences-inner::before {
+        width: 72rem; } }
+    @media only screen and (max-width: 910px) {
+      .conveniences-inner::before {
+        width: 63rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .conveniences-inner::before {
+        transform: rotate(90deg);
+        left: -16rem;
+        width: 68rem; } }
+    @media only screen and (max-width: 810px) {
+      .conveniences-inner::before {
+        left: -21rem; } }
+    @media only screen and (max-width: 700px) {
+      .conveniences-inner::before {
+        display: none; } }
 
 .convenience {
-  flex-basis: 35rem; }
+  max-width: 35rem; }
+  @media only screen and (max-width: 56.25em) {
+    .convenience {
+      display: flex;
+      max-width: 57rem;
+      width: 100%;
+      margin-bottom: 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .convenience {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      margin-bottom: 4.8rem; } }
   .convenience:not(:last-child) {
     margin-right: 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .convenience:not(:last-child) {
+        margin-right: 0; } }
+  .convenience__img {
+    width: 5.6rem;
+    height: 5.6rem; }
+  .convenience__info {
+    margin-left: 7.9rem; }
+    @media only screen and (max-width: 37.5em) {
+      .convenience__info {
+        margin: 0; } }
   .convenience__heading {
     margin: 4rem 0 2.7rem; }
+    @media only screen and (max-width: 56.25em) {
+      .convenience__heading {
+        margin: 0;
+        margin-bottom: 2.7rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .convenience__heading {
+        margin-top: 2.4rem; } }
 
 .telemetry {
   background-image: url(../images/rectangle-arrow.svg), url(../images/bg-light-circle.png);
   background-size: 74rem 15rem, 44.5rem 44.5rem;
   background-repeat: no-repeat;
-  background-position: right bottom, right -30rem center; }
+  background-position: right center, right -35rem top; }
+  @media only screen and (max-width: 740px) {
+    .telemetry {
+      background-position: right -20rem center, right -35rem top; } }
+  @media only screen and (max-width: 37.5em) {
+    .telemetry {
+      background-image: url(../images/rectangle-arrow.svg), none;
+      background-position: right -390px top 160px, right -35rem top; } }
 
 .city {
   background-image: url(../images/rectangle-arrow2.svg), url(../images/bg-light-circle.png);
   background-size: 75rem 15rem, 44.5rem 44.5rem;
   background-repeat: no-repeat;
-  background-position: left -31rem top, left -30rem center;
+  background-position: left -41rem top, left -35rem top;
   z-index: 100; }
+  @media only screen and (max-width: 37.5em) {
+    .city {
+      background-image: url(../images/rectangle-arrow2.svg), none;
+      background-position: left -48rem top, left -35rem top; } }
   .city .content {
     flex-direction: row-reverse; }
+    @media only screen and (max-width: 56.25em) {
+      .city .content {
+        flex-direction: column-reverse; } }
 
 .payment {
   background-image: url(../images/rectangle-arrow.svg), url(../images/bg-light-circle.png);
   background-size: 74rem 15rem, 44.5rem 44.5rem;
   background-repeat: no-repeat;
-  background-position: right -31rem top 8rem, right -30rem center;
+  background-position: right -31rem top 8rem, right -35rem top;
   margin-bottom: 20rem;
   z-index: 100; }
+  @media only screen and (max-width: 56.25em) {
+    .payment {
+      margin-bottom: 10rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .payment {
+      background-image: url(../images/rectangle-arrow.svg), none;
+      background-position: right -52rem top, right -35rem top;
+      margin-bottom: 12rem; } }
 
 .locations-hero {
   background-image: url(../images/hero-circle.svg), url(../images/locations-bg.png);

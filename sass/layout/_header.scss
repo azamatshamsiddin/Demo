@@ -1,17 +1,81 @@
 .header {
   padding: 2.2rem 0;
+
+  @include respond(tablet) {}
 }
 
-.logo{
+.header-btn {
+  @include respond(phone) {
+    display: none;
+  }
+
+}
+
+.logo {
   text-decoration: none;
-  margin-right: 6rem;
   transition: all .3s ease;
-  &:hover{
+
+  &:hover {
     opacity: .8;
+  }
+
+  @include respond(phone) {
+    margin: 0 auto;
+  }
+
+  &__img {
+    @include respond(phone) {
+      display: inline-block;
+      width: 7.5rem;
+      height: 2rem;
+    }
   }
 }
 
 .header-inner {
   display: flex;
   align-items: center;
+}
+
+.header-nav {
+  @include respond (phone) {
+    display: none;
+  }
+}
+
+.burger {
+  &__label {
+    display: none;
+
+    @include respond (phone) {
+      display: block;
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+
+  &__menu {
+    display: inline-block;
+    width: 2rem;
+    height: 4px;
+    background-color: $color-yellow;
+    position: relative;
+
+    &::before,
+    &::after {
+      @include baElements(2rem, 4px);
+      position: absolute;
+      background-color: $color-yellow;
+    }
+
+    &::before {
+      top: 6px;
+    }
+
+    &::after {
+      top: -6px;
+    }
+  }
 }

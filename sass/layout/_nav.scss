@@ -1,11 +1,17 @@
 .list {
   display: flex;
+  margin-left: 6rem;
+
+  @include respond (tablet) {
+    margin-left: 4rem;
+  }
 
   &__item {
     list-style: none;
+    margin-right: 3.2rem;
 
-    &:not(:last-child) {
-      margin-right: 3.2rem;
+    @include respond (tablet) {
+      margin-right: 2rem;
     }
   }
 

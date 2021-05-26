@@ -38,6 +38,7 @@
   text-decoration: none;
   display: inline-block;
   transition: all .3s ease;
+  z-index: 100;
   &:not(:last-child){
     margin-right: 2.4rem;
   }

@@ -1,25 +1,71 @@
-// background-image: url(../../images/bg-rectangle.svg), url(../../images/hero-circle.svg), url(../../images/hero-bg-img.png);
-// background-size: 19rem 1.5rem, 23.4rem 6rem, cover;
-// background-position: left top 58%, right -5rem bottom 15rem, center;
 .hero {
   padding: 15.3rem 0;
-  background-image: url(../images/hero-bg.png);
-  background-size: cover;
-  background-position: center;
+  background-image: url(../images/hero-arrow.svg), url(../images/hero-circle.svg), url(../images/hero-bg-img.png);
+  background-size: 45rem 15rem, 23.4rem 6.2rem, cover;
+  background-position: left 780px bottom 152px, right -3.5rem bottom 16.5rem, center;
   background-repeat: no-repeat;
+  position: relative;
+
+  @include respond(tablet-land) {
+    background-image: none, url(../images/hero-circle.svg), url(../images/hero-bg-img.png);
+  }
+
+  @include respond (tablet) {
+    padding: 13.7rem 0 21.5rem;
+    background-image: url(../images/hero-arrow.svg), url(../images/hero-circle.svg), url(../images/hero-bg-img.png);
+    background-position: left -12rem bottom 3rem, right -3.5rem bottom 4.5rem, right -18rem center;
+  }
+
+  @include respond(phone) {
+    padding: 11.5rem 0 18rem;
+    background-image: url(../images/hero-arrow.svg), none, url(../images/hero-bg-img.png);
+    background-position: left -32rem bottom 3rem, right -3.5rem bottom 4.5rem, right -8rem center;
+  }
+
+  &::before {
+    @include baElements(28rem, 1.5rem);
+    background-color: $color-yellow;
+    position: absolute;
+    top: 54%;
+    left: 0;
+
+    @include respond(tablet-land) {
+      display: none;
+    }
+  }
 }
 
 .hero-inner {
   max-width: 50rem;
+
+  @include respond(tablet) {
+    margin: 0 auto;
+    text-align: center;
+  }
 }
 
 .hero-info {
   margin-top: 4rem;
   max-width: 40.5rem;
+  margin-left: auto;
+
+  @include respond (tablet) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: unset;
+  }
+
+  @include respond(phone) {
+    margin-top: 2.4rem;
+  }
 
   &__text {
     margin-bottom: 4rem;
     color: $color-white;
+
+    @include respond (phone) {
+      margin-bottom: 3.4rem;
+    }
   }
 }
 
@@ -29,10 +75,20 @@
 .conveniences {
   margin-top: 16rem;
   position: relative;
+
+  @include respond (phone) {
+    margin-top: 12rem;
+  }
 }
 
 .conveniences-inner {
   display: flex;
+
+  @include respond(tablet) {
+    flex-direction: column;
+    max-width: 57rem;
+    margin: 0 auto;
+  }
 
   &::before {
     @include baElements(105rem, 1.5rem);
@@ -41,19 +97,94 @@
     top: 4rem;
     left: 0;
     z-index: -1;
+
+    @media only screen and(max-width: 1500px) {
+      width: 95rem;
+    }
+
+    @media only screen and(max-width: 1300px) {
+      width: 86rem;
+    }
+
+    @include respond(tablet-land) {
+      width: 81rem;
+    }
+
+    @media only screen and(max-width: 1050px) {
+      width: 72rem;
+    }
+
+    @media only screen and(max-width: 910px) {
+      width: 63rem;
+    }
+
+    @include respond (tablet) {
+      transform: rotate(90deg);
+      left: -16rem;
+      width: 68rem;
+    }
+
+    @media only screen and(max-width: 810px) {
+      left: -21rem;
+    }
+
+    @media only screen and(max-width: 700px) {
+      display: none;
+    }
   }
 }
 
 .convenience {
-  flex-basis: 35rem;
+  max-width: 35rem;
+
+  @include respond(tablet) {
+    display: flex;
+    max-width: 57rem;
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 4.8rem;
+  }
 
   &:not(:last-child) {
     margin-right: 3rem;
+
+    @include respond (phone) {
+      margin-right: 0;
+    }
+  }
+
+  &__img {
+    width: 5.6rem;
+    height: 5.6rem;
+  }
+
+  &__info {
+    margin-left: 7.9rem;
+
+    @include respond(phone) {
+      margin: 0;
+    }
   }
 
   &__heading {
     margin: 4rem 0 2.7rem;
+
+    @include respond(tablet) {
+      margin: 0;
+      margin-bottom: 2.7rem;
+    }
+
+    @include respond(phone) {
+      margin-top: 2.4rem;
+    }
   }
+
 }
 
 //******************************************
@@ -63,18 +194,37 @@
   background-image: url(../images/rectangle-arrow.svg), url(../images/bg-light-circle.png);
   background-size: 74rem 15rem, 44.5rem 44.5rem;
   background-repeat: no-repeat;
-  background-position: right bottom, right -30rem center;
+  background-position: right center, right -35rem top;
+
+  @media only screen and (max-width: 740px) {
+    background-position: right -20rem center, right -35rem top;
+  }
+
+  @include respond(phone) {
+    background-image: url(../images/rectangle-arrow.svg), none;
+    background-position: right -390px top 160px, right -35rem top;
+  }
+
 }
 
 .city {
   background-image: url(../images/rectangle-arrow2.svg), url(../images/bg-light-circle.png);
   background-size: 75rem 15rem, 44.5rem 44.5rem;
   background-repeat: no-repeat;
-  background-position: left -31rem top, left -30rem center;
+  background-position: left -41rem top, left -35rem top;
   z-index: 100;
+
+  @include respond(phone) {
+    background-image: url(../images/rectangle-arrow2.svg), none;
+    background-position: left -48rem top, left -35rem top;
+  }
 
   & .content {
     flex-direction: row-reverse;
+
+    @include respond (tablet) {
+      flex-direction: column-reverse;
+    }
   }
 }
 
@@ -82,7 +232,18 @@
   background-image: url(../images/rectangle-arrow.svg), url(../images/bg-light-circle.png);
   background-size: 74rem 15rem, 44.5rem 44.5rem;
   background-repeat: no-repeat;
-  background-position: right -31rem top 8rem, right -30rem center;
+  background-position: right -31rem top 8rem, right -35rem top;
   margin-bottom: 20rem;
   z-index: 100;
+
+  @include respond (tablet) {
+    margin-bottom: 10rem;
+  }
+
+  @include respond(phone) {
+    background-image: url(../images/rectangle-arrow.svg), none;
+    background-position: right -52rem top, right -35rem top;
+    margin-bottom: 12rem;
+  }
+
 }
